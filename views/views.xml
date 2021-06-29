@@ -1,0 +1,16 @@
+<odoo>
+	
+	<record model="ir.ui.view" id="invetory_treeview_custom">
+		<field name="name">inventory.treeview.custom</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="desc_on_picking.view_stock_picking_wave_desc_tree_inherit"/>
+		<field name="arch" type="xml">
+
+			<xpath expr="//field[@name='quantity']" position="after">
+				<field name="product_uomx"/>
+			</xpath>
+
+		</field>
+	</record>
+
+</odoo>
